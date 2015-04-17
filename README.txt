@@ -3,9 +3,24 @@ CS174A Assignment 1
 Gabrielle Robertson
 SID: 604194100
 -----------------------------
+~~Extra Credit~~
+Checklist: 
+	- rotating and scaling each individual cube
+	- using quaternions (by using rotate())
+	- assignment submission through GitHub
+	- early submission by 1 day 
 
-My method was to create a buffer for each of the objects that needed drawing per render() call: for each of the cubes, the outlines, and the crosshair. 
+NOTES: 
+	For the first thing on the extra credit list, continuously rotating and scaling each cube, in order for this not to affect the appearance of the crosshair, I made the crosshair 
+	1. very large (to not be affected by the continuous scaling) and 2. extend on the x, y, AND z axes, so that while the cubes are rotating on the x axis, you don't notice
+	that the crosshair is rotating too. 
+
+	
+~~The Basic Setup~~
+My method was to create a new buffer for each of the objects that needed drawing for each render() call: for each of the cubes, the outlines, and the crosshair. 
 For each of these, I decided which uniforms needed to be edited in the shader. 
+
+Here's a table of why I edited each property for each element: 
 
 
 			objects: 		cube											outline 							crosshair 
